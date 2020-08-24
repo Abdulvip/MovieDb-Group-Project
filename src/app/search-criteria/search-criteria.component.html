@@ -1,1 +1,21 @@
-<p>search-criteria works!</p>
+<div>
+  <form #searchForm="ngForm" (submit)="filter(searchForm)">
+    <label for="genre">Genre</label>
+    <select name="genre" id="genre" ngModel>
+      <option *ngFor="let genre of genres" value="{{ genre.id }}">{{
+        genre.name
+      }}</option>
+    </select>
+    <label for="rating">Rating</label>
+    <input
+      type="number"
+      name="rating"
+      id="rating"
+      placeholder="Enter number 1-10"
+      ngModel
+    />
+    <label for="releaseYear">Release Year</label>
+    <input type="number" name="releaseYear" id="releaseYear" ngModel />
+    <button>Search</button>
+  </form>
+</div>
