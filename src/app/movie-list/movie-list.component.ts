@@ -19,7 +19,7 @@ export class MovieListComponent implements OnInit {
   getMovieList = ()=>{
     this.route.queryParamMap.subscribe((params)=>{
       this.movieDb.getMovieList(params.get('genre'), params.get('year')).subscribe((response)=>{
-        this.movieList = response;
+        this.movieList = response.results;
         console.log(this.movieList);
       })
     })
