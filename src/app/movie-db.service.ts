@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import {Movie} from './interface/movie'
 
 @Injectable({
   providedIn: 'root',
 })
 export class MovieDbService {
+  watchList: Movie[];
   // baseUrl: string = 'https://api.themoviedb.org/3/movie/550?';
   genreUrl: string =
     'https://api.themoviedb.org/3/genre/movie/list?api_key=24762c0485091b5bfc7fcf403a30da23&language=en-US';

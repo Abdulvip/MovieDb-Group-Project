@@ -1,4 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import {Movie} from '../interface/movie'
+import { MovieDbService } from '../movie-db.service';
 
 @Component({
   selector: 'app-card',
@@ -6,13 +8,17 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./card.component.css'],
 })
 export class CardComponent implements OnInit {
-  @Output() clicked = new EventEmitter<string>();
+  @Output() clicked = new EventEmitter<Movie>();
   @Input() movieRef: any;
-  constructor() {}
+  constructor(private movieDb: MovieDbService) {}
 
   ngOnInit(): void {}
 
   addToWatchList = () => {
-    console.log(this.movieRef.title);
+    let newMovie = {
+      title: this.movieRef.title,
+      image: this.movieRef.poster_path
+    }
+    this.clicked.emit(newMovie);
   };
 }
