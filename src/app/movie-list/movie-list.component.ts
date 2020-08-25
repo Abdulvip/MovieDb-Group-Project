@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieDbService } from '../movie-db.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Movie } from '../interface/movie';
 
 @Component({
@@ -11,11 +11,12 @@ import { Movie } from '../interface/movie';
 export class MovieListComponent implements OnInit {
   movieList: any;
   showDetailsView: boolean;
-  constructor(private movieDb: MovieDbService, private route: ActivatedRoute) {}
+  constructor(private movieDb: MovieDbService, private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.getMovieList();
     this.showDetailsView = false;
+    this.movieDb.resultsPath = this.router.url;
   }
 
   getMovieList = () => {
