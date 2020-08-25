@@ -1,3 +1,15 @@
-body {
-  font-family: Helvetica;
+body,
+html {
+  font-family: "Krub", sans-serif;
+background: linear-gradient(to bottom, #9bd7d1, #325d79);
+padding: 0;
+margin: 0;
+background-repeat: no-repeat;
+background-attachment: fixed;
+height: 100%;
 }
+
+a {
+  color:inherit;
+  text-decoration: none;
+ }

@@ -1,3 +1,4 @@
+
 .card {
   display: flex;
   justify-content: center;
@@ -8,6 +9,7 @@
   margin: 15px;
   box-shadow: 0px 0px 10px 0px rgba(204, 204, 204, 1);
   border-radius: 10px;
+  width: 600px;
 }
 
 .button {
@@ -17,6 +19,10 @@
   padding: 10px;
   border: none;
   transition: 0.3s;
+}
+
+.button:focus {
+  outline: 0;
 }
 
 img {
