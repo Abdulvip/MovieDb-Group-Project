@@ -1,21 +1,28 @@
 <div class="search">
-  <form #searchForm="ngForm" (submit)="filter(searchForm)">
-    <label for="genre">Genre</label>
-    <select name="genre" id="genre" ngModel>
-      <option *ngFor="let genre of genres" value="{{ genre.id }}">{{
-        genre.name
-      }}</option>
+  <form class="form" #searchForm="ngForm" (submit)="filter(searchForm)">
+    <label class="spacing" for="genre">Genre</label>
+    <select class="select" name="genre" id="genre" ngModel>
+      <option *ngFor="let genre of genres" value="{{ genre.id }}">
+        {{ genre.name }}
+      </option>
     </select>
-    <label for="rating">Rating</label>
+    <label class="spacing" for="rating">Rating</label>
     <input
+      class="input"
       type="number"
       name="rating"
       id="rating"
       placeholder="Enter a number 1-10"
       ngModel
     />
-    <label for="releaseYear">Release Year</label>
-    <input type="number" name="releaseYear" id="releaseYear" ngModel />
-    <button>Search</button>
+    <label class="spacing more-spacing" for="releaseYear">Release Year</label>
+    <input
+      class="input"
+      type="number"
+      name="releaseYear"
+      id="releaseYear"
+      ngModel
+    />
+    <button class="button">Search</button>
   </form>
 </div>
