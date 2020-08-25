@@ -9,7 +9,7 @@ import {Router} from '@angular/router'
   styleUrls: ['./card.component.css'],
 })
 export class CardComponent implements OnInit {
-  @Output() clicked = new EventEmitter<Movie>();
+  @Output() clicked = new EventEmitter<void>();
   @Output() detailsEvent = new EventEmitter<Movie>();
   @Input() movieRef: any;
   watchListButtonText: string;
@@ -57,7 +57,7 @@ export class CardComponent implements OnInit {
   };
 
   moreDetails = () => {
-    this.detailsEvent.emit(this.movieRef);
+    this.detailsEvent.emit();
     this.movieDb.showDetails(this.movieRef);
   }
 
