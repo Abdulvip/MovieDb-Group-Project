@@ -10,8 +10,8 @@
       <h1>{{ movieRef.original_title }}</h1>
       <h2>Rating: {{ movieRef.vote_average }}</h2>
       <p>{{ movieRef.overview }}</p>
-      <button (click)="addToWatchList()" class="button">
-        Add to Watchlist
+      <button [ngClass]="addedToWatchList ? 'added': 'not-added'" (click)="toggleWatchList()" class="button">
+        {{watchListButtonText}}
       </button>
     </div>
   </div>

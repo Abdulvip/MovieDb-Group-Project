@@ -13,7 +13,9 @@ export class MovieDbService {
   discoverBaseUrl: string= `https://api.themoviedb.org/3/discover/movie?api_key=8bdaf99ef685224150a33e36db6646d6&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1`;
   key: string = '24762c0485091b5bfc7fcf403a30da23';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    this.watchList =[];
+  }
 
   getMovieList = (genreId: string, releaseYear: string):any =>{
     return this.http.get(this.discoverBaseUrl,{

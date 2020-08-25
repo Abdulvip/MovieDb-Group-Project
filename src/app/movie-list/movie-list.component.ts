@@ -21,7 +21,6 @@ export class MovieListComponent implements OnInit {
         .getMovieList(params.get('genre'), params.get('year'))
         .subscribe((response) => {
           this.movieList = response.results;
-          console.log(this.movieList);
         });
     });
   };

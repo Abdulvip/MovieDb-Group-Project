@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import {Movie} from '../interface/movie'
 import { MovieDbService } from '../movie-db.service';
+import {Router} from '@angular/router'
 
 @Component({
   selector: 'app-card',
@@ -10,15 +11,49 @@ import { MovieDbService } from '../movie-db.service';
 export class CardComponent implements OnInit {
   @Output() clicked = new EventEmitter<Movie>();
   @Input() movieRef: any;
-  constructor(private movieDb: MovieDbService) {}
+  watchListButtonText: string;
+  addedToWatchList: boolean;
+  constructor(private movieDb: MovieDbService, private router: Router) {
 
-  ngOnInit(): void {}
+ 
+  }
 
-  addToWatchList = () => {
-    let newMovie = {
-      title: this.movieRef.title,
-      image: this.movieRef.poster_path
+  ngOnInit(): void {
+    console.log(this.movieDb.watchList);
+
+      if(this.movieDb.watchList.some((movie)=>{return movie.original_title === this.movieRef.original_title})){
+        
+        this.addedToWatchList = true;
+        this.watchListButtonText = "Remove from Watchlist";
+      }
+      else{
+        this.addedToWatchList = false;
+        this.watchListButtonText = "Add to Watchlist";
+      }
+
+  }
+
+  toggleWatchList = () => {
+    if(!this.addedToWatchList){
+      this.addedToWatchList = true;
+      let newMovie: Movie = {
+        original_title: this.movieRef.title,
+        poster_path: this.movieRef.poster_path,
+        vote_average: this.movieRef.vote_average,
+        overview: this.movieRef.overview,
+      }
+      this.movieDb.watchList.push(newMovie);
+      this.watchListButtonText = "Remove from Watchlist";
     }
-    this.clicked.emit(newMovie);
+    else{
+      this.addedToWatchList = false;
+      this.watchListButtonText = "Add to Watchlist";
+
+      this.movieDb.watchList.splice(this.movieDb.watchList.findIndex((movie)=>{
+        return movie.original_title === this.movieRef.original_title;
+      }), 1)
+    }
   };
+
+
 }

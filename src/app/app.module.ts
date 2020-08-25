@@ -8,6 +8,8 @@ import { SearchCriteriaComponent } from './search-criteria/search-criteria.compo
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { WatchlistPageComponent } from './watchlist-page/watchlist-page.component';
 import { CardComponent } from './card/card.component';
+import { HeaderComponent } from './header/header.component';
+import { WatchlistCardComponent } from './watchlist-card/watchlist-card.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { CardComponent } from './card/card.component';
     MovieListComponent,
     WatchlistPageComponent,
     CardComponent,
+    HeaderComponent,
+    WatchlistCardComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

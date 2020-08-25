@@ -44,3 +44,7 @@ img {
     justify-content: center;
   }
 }
+
+.added{
+  background: red;
+}
