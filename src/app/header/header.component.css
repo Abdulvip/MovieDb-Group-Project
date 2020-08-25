@@ -26,5 +26,21 @@
   color: #f26627;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
+  .header{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .nav {
+    width: 50%;
+  }
+
+  .nav-item{
+    font-size: 20px;
+  }
+
+  .title{
+    margin-left: 15px;
+  }
 }

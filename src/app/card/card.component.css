@@ -63,9 +63,6 @@ img {
 }
 
 @media only screen and (min-width: 768px) {
-  .card {
-    flex-direction: row;
-  }
 
   .info-container {
     flex: 2;
@@ -76,5 +73,9 @@ img {
     flex: 1;
     align-items: center;
     justify-content: center;
+  }
+
+  .card{
+    height: 400px;
   }
 }

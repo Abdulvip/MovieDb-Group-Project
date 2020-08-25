@@ -2,20 +2,34 @@
   background: rgba(0, 0, 0, 0.7);
   height: 100%;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
   position: fixed;
 }
 
 .card {
+    position: relative;
+    padding: 10px;
   display: flex;
+  transform: translate(-50%, -50%);
+  top: 40%;
+  left: 50%;
   justify-content: center;
   align-content: center;
   flex-direction: column;
   background: white;
+  border-radius: 5px;
+  margin-bottom: 20px;
   width: 300px;
 }
+
+.button {
+    color: black;
+    background-color: #f9a26c;
+    border-radius: 10px;
+    padding: 7px;
+    border: none;
+    transition: 0.3s;
+    margin: 5px;
+  }
 
 .img-container {
   display: flex;
@@ -33,6 +47,11 @@
   justify-content: center;
   align-content: center;
   flex-direction: column;
+  text-align: center;
+}
+
+.overview{
+    font-size: 12px;
 }
 
 .title {

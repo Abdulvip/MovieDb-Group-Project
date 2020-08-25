@@ -47,3 +47,29 @@
   background-color: #f26627;
   color: white;
 }
+
+@media only screen and (min-width: 600px) {
+.form{
+  flex-direction: row;
+ justify-content: center;
+ align-items: center;
+}
+
+.search{
+  position: relative;
+  transform: translate(-50%, -50%);
+  margin-top: 50px;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+}
+
+.input{
+  margin: 3px;
+}
+
+.select{
+  margin: 3px;
+}
+
+}

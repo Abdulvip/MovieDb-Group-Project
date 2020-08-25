@@ -5,3 +5,19 @@
   align-items: center;
   /* margin-left: -20px; */
 }
+
+.title {
+  text-align: center;
+  display: none;
+}
+
+@media only screen and (min-width: 600px){
+  .results{
+    /* flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; */
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: auto auto auto;
+  }
+}
