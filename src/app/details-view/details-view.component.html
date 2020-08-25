@@ -1,17 +1,16 @@
 <main class="main">
-    <div class="card">
-      <div class="img-container">
-        <img
-          class="img"
-          src="http://image.tmdb.org/t/p/w185{{ highlightedMovie.poster_path }}"
-        />
-      </div>
-      <div class="info-container">
-        <h1>{{ highlightedMovie.original_title }}</h1>
-        <h2>Rating: {{ highlightedMovie.vote_average }}</h2>
-        <p> {{highlightedMovie.overview}}</p>
-      </div>
+  <div class="card">
+    <div class="img-container">
+      <img
+        class="img"
+        src="http://image.tmdb.org/t/p/w185{{ highlightedMovie.poster_path }}"
+      />
     </div>
-    <button (click)="backToList()">Back to list</button>
-  </main>
-  
+    <div class="info-container">
+      <h1 class="title">{{ highlightedMovie.original_title }}</h1>
+      <h2 class="rating">Rating: {{ highlightedMovie.vote_average }}</h2>
+      <p>{{ highlightedMovie.overview }}</p>
+      <button (click)="backToList()">Back to list</button>
+    </div>
+  </div>
+</main>

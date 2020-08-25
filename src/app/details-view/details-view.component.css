@@ -1,9 +1,44 @@
-.main{
-    background: rgba(0,0,0,.7);
-    height: 100vh;
-    position: fixed;
+.main {
+  background: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  position: fixed;
 }
 
-.card{
-    background: white;
+.card {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  background: white;
+  width: 300px;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.img {
+  border: 5px solid black;
+  width: 150px;
+}
+
+.info-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 18px;
+}
+
+.rating {
+  font-size: 15px;
 }

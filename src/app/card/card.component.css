@@ -1,3 +1,6 @@
+/* .main {
+  width: 100%;
+} */
 
 .card {
   display: flex;
@@ -6,19 +9,39 @@
   align-items: center;
   background-color: rgb(238, 238, 238);
   padding: 10px;
-  margin: 15px;
+  margin-bottom: 15px;
   box-shadow: 0px 0px 10px 0px rgba(204, 204, 204, 1);
   border-radius: 10px;
-  width: 600px;
+  width: 100%;
+}
+
+.info-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
 }
 
 .button {
-  color: white;
-  background-color: #505355;
-  border-radius: 15px;
-  padding: 10px;
+  color: black;
+  background-color: #f9a26c;
+  border-radius: 10px;
+  padding: 7px;
   border: none;
   transition: 0.3s;
+  margin: 5px;
+}
+
+.rating {
+  font-size: 18px;
+  text-align: center;
+}
+
+.movie-title {
+  text-align: center;
+  font-size: 15px;
+  margin: 10px;
+  width: 150px;
 }
 
 .button:focus {
@@ -27,11 +50,16 @@
 
 img {
   border: solid 5px black;
+  width: 150px;
 }
 
 .button:hover {
-  background-color: #5becd8;
-  color: black;
+  background-color: #f26627;
+  color: white;
+}
+
+.added {
+  background: red;
 }
 
 @media only screen and (min-width: 768px) {
@@ -49,8 +77,4 @@ img {
     align-items: center;
     justify-content: center;
   }
-}
-
-.added{
-  background: red;
 }

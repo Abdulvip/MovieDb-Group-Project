@@ -1,5 +1,6 @@
-<main>
+<main class="main">
   <div class="card">
+    <h2 class="movie-title">{{ movieRef.original_title }}</h2>
     <div class="img-container">
       <img
         class="img"
@@ -7,12 +8,15 @@
       />
     </div>
     <div class="info-container">
-      <h1>{{ movieRef.original_title }}</h1>
-      <h2>Rating: {{ movieRef.vote_average }}</h2>
-      <button [ngClass]="addedToWatchList ? 'added': 'not-added'" (click)="toggleWatchList()" class="button">
-        {{watchListButtonText}}
+      <h2 class="rating">Rating: {{ movieRef.vote_average }}</h2>
+      <button
+        [ngClass]="addedToWatchList ? 'added' : 'not-added'"
+        (click)="toggleWatchList()"
+        class="button"
+      >
+        {{ watchListButtonText }}
       </button>
-      <button (click)="moreDetails()">More details</button>
+      <button class="button" (click)="moreDetails()">More details</button>
     </div>
   </div>
 </main>

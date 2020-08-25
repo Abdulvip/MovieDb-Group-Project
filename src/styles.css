@@ -1,15 +1,24 @@
-body,
-html {
+li,
+ul,
+h1,
+h2 {
+  padding: 0;
+  margin: 0;
+}
+
+body {
   font-family: "Krub", sans-serif;
-background: linear-gradient(to bottom, #9bd7d1, #325d79);
-padding: 0;
-margin: 0;
-background-repeat: no-repeat;
-background-attachment: fixed;
-height: 100%;
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+  background-color: #9bd7d1;
+  /* background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+  background: linear-gradient(to bottom, #9bd7d1, #325d79); */
 }
 
 a {
-  color:inherit;
+  color: inherit;
   text-decoration: none;
- }
+}

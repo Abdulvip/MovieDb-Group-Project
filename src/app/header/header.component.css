@@ -1,44 +1,30 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  align-items: center;
+  background-color: #efeeee;
+  padding: 10px;
+  box-shadow: 0px 0px 10px 0px rgb(121, 121, 121);
+  width: 100%;
+  position: fixed;
+}
+
 .title {
-    font-family: "Knewave", cursive;
-    font-size: 70px;
-    padding: 0;
-    margin: 0;
-    margin-left: 20px;
-  }
-  .header {
-    position: fixed;
-    top: 0;
-    background-color: #efeeee;
-    color: #f26627;
-    margin: 0;
-    width: 100vw;
-    padding: 20px;
-    box-shadow: 0px 0px 10px 0px rgb(121, 121, 121);
-  }
-  /* F26627 DARK ORANGE
-  F9A26C LIGHT ORANGE
-  EFEEEE WHITE
-  9BD7D1 TEAL
-  325D79 DARK BLUE*/
-  .header-contents {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  .nav-item {
-    margin-right: 60px;
-    font-size: 40px;
-    list-style-type: none;
-  }
-  a:link {
-    text-decoration: none;
-  }
-  a:visited {
-    text-decoration: none;
-  }
+  font-family: "Knewave", cursive;
+  color: #f26627;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.nav-item {
+  list-style: none;
+  color: #f26627;
+}
+
+@media only screen and (min-width: 768px) {
+}
