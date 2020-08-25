@@ -10,6 +10,7 @@ import {Router} from '@angular/router'
 })
 export class CardComponent implements OnInit {
   @Output() clicked = new EventEmitter<Movie>();
+  @Output() detailsEvent = new EventEmitter<Movie>();
   @Input() movieRef: any;
   watchListButtonText: string;
   addedToWatchList: boolean;
@@ -19,7 +20,7 @@ export class CardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.movieDb.watchList);
+    
 
       if(this.movieDb.watchList.some((movie)=>{return movie.original_title === this.movieRef.original_title})){
         
@@ -54,6 +55,11 @@ export class CardComponent implements OnInit {
       }), 1)
     }
   };
+
+  moreDetails = () => {
+    this.detailsEvent.emit(this.movieRef);
+    this.movieDb.showDetails(this.movieRef);
+  }
 
 
 }

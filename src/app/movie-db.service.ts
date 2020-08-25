@@ -6,6 +6,7 @@ import { Movie } from './interface/movie';
   providedIn: 'root',
 })
 export class MovieDbService {
+  detailedMovie: Movie;
   watchList: Movie[];
   // baseUrl: string = 'https://api.themoviedb.org/3/movie/550?';
   genreUrl: string =
@@ -34,4 +35,8 @@ export class MovieDbService {
   getGenre = (): any => {
     return this.http.get(this.genreUrl);
   };
+
+  showDetails=(highlightedMovie: Movie)=>{
+    this.detailedMovie = highlightedMovie;
+  }
 }

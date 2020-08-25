@@ -1,3 +1,4 @@
+<app-details-view *ngIf="showDetailsView" (goBackEvent)="hideDetails()"></app-details-view>
 <div class="watchlist">
-    <app-card *ngFor="let movie of watchList" [movieRef]="movie"></app-card>
+    <app-card *ngFor="let movie of watchList" [movieRef]="movie"(detailsEvent)="showDetails($event)"></app-card>
 </div>

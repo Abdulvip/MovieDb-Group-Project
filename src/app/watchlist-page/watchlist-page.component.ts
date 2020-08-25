@@ -9,12 +9,21 @@ import { Movie } from '../interface/movie';
 })
 export class WatchlistPageComponent implements OnInit {
   watchList: Movie[];
+  showDetailsView: boolean;
 
   constructor(private movieDb: MovieDbService) {}
 
   ngOnInit(): void {
-
+    this.showDetailsView = false;
     this.watchList = this.movieDb.watchList;
+  }
+
+  showDetails(highlightedMovie: Movie){
+    this.showDetailsView = true;
+  }
+
+  hideDetails(){
+    this.showDetailsView = false;
   }
 
   // onDelete(index: number) {

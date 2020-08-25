@@ -10,6 +10,7 @@ import { WatchlistPageComponent } from './watchlist-page/watchlist-page.componen
 import { CardComponent } from './card/card.component';
 import { HeaderComponent } from './header/header.component';
 import { WatchlistCardComponent } from './watchlist-card/watchlist-card.component';
+import { DetailsViewComponent } from './details-view/details-view.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { WatchlistCardComponent } from './watchlist-card/watchlist-card.componen
     CardComponent,
     HeaderComponent,
     WatchlistCardComponent,
+    DetailsViewComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

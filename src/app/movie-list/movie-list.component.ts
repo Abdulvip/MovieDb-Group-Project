@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieDbService } from '../movie-db.service';
 import { ActivatedRoute } from '@angular/router';
+import { Movie } from '../interface/movie';
 
 @Component({
   selector: 'app-movie-list',
@@ -9,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MovieListComponent implements OnInit {
   movieList: any;
+  showDetailsView: boolean;
   constructor(private movieDb: MovieDbService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
@@ -28,4 +30,13 @@ export class MovieListComponent implements OnInit {
         });
     });
   };
+
+  showDetails(highlightedMovie: Movie){
+    this.showDetailsView = true;
+  }
+
+  hideDetails(){
+    this.showDetailsView = false;
+  }
+
 }

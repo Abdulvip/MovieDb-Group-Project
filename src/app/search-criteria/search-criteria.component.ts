@@ -10,11 +10,13 @@ import { MovieDbService } from '../movie-db.service';
 })
 export class SearchCriteriaComponent implements OnInit {
   genres: any;
+  
 
   constructor(private router: Router, private movieDb: MovieDbService) {}
 
   ngOnInit(): void {
     this.getGenre();
+    showDetails: false;
   }
 
   filter = (form: NgForm) => {
