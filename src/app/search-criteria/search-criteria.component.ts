@@ -11,7 +11,6 @@ import { MovieDbService } from '../movie-db.service';
 export class SearchCriteriaComponent implements OnInit {
   genres: any;
 
-
   constructor(private router: Router, private movieDb: MovieDbService) {}
 
   ngOnInit(): void {
@@ -24,11 +23,10 @@ export class SearchCriteriaComponent implements OnInit {
       queryParams: {
         genre: form.value.genre,
         year: form.value.releaseYear,
-      }
+        rating: form.value.rating,
+      },
     });
   };
-
-
 
   getGenre = (): any => {
     this.movieDb.getGenre().subscribe((response) => {
