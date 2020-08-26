@@ -6,16 +6,17 @@ h2 {
   margin: 0;
 }
 
-body {
+body,
+html {
   font-family: "Krub", sans-serif;
   background-size: cover;
   padding: 0;
   margin: 0;
-  background-color: #9bd7d1;
-  /* background-repeat: no-repeat;
+  /* background-color: #9bd7d1; */
+  background-repeat: no-repeat;
   background-attachment: fixed;
   height: 100%;
-  background: linear-gradient(to bottom, #9bd7d1, #325d79); */
+  background: linear-gradient(to bottom, #9bd7d1, #325d79);
 }
 
 a {
